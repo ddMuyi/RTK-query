@@ -1,13 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Clash Display', sans-serif;
+  font-weight:600;
+}
+
+.wl-shadow {
+  box-shadow: inset 0 4px 10px #000000;
+}
+
+/* Animations */
+.avatars, .people, .assets, .icons, .landmarks, .hands, .objects, .places {
+  transform: translateY(-100vh);
+}
+
+.free {
+  animation:1s drop ease;
+}
+
+@keyframes drop {
+  from{transform: translateY(-100vh);}
+  70%{transform: translateY(0);}
+  85%{transform: translateY(-30px);}
+  to{transform: translateY(0);}
+}
+
+.avatars{
+  animation: 1s avatars ease;
+  animation-delay: 0.5s;
+}
+
+@keyframes avatars {
+  from {transform: translateY(-100vh) rotate(45deg)}
+  70%{transform: translateY(0) rotate(45deg)}
+  to{transform: translateY(0) rotate(0)}
+}
+
+.avatars, .avatars, .people, .assets, .icons, .landmarks, .hands, .objects,.places{
+  transform: translateY(0);
+}
+/* .people {
+  transform: rotate(-31.5deg) translate(-20px, 25px);
+}
+
+.assets {
+  transform: rotate(-17.85deg) translate(-20px, 60px);
+}
+
+.icons {transform:translateX(-40px)}
+
+.landmarks {
+  transform: rotate(5.45deg) translate(-20px, 60px);
+  margin-left:40px
+}
+
+.hands, .objects, .places{
+  transform: translateY(50px);
+} */
